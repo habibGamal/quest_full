@@ -1,0 +1,373 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "contact": "Contact",
+    "getStarted": "Get Started"
+  },
+  "hero": {
+    "badge": "Transform Your Brand Today",
+    "title": {
+      "mystical": "Mystical",
+      "marketing": "Marketing",
+      "beyond": "Beyond Imagination"
+    },
+    "subtitle": "Dive into a world where creativity flows like magic. We craft enchanting brand experiences that",
+    "highlight": "captivate and convert.",
+    "cta": {
+      "primary": "Let's Talk",
+      "secondary": "Watch Our Story"
+    },
+    "stats": {
+      "clients": "Happy Clients",
+      "roi": "Average ROI",
+      "reach": "Reach Generated"
+    }
+  },
+  "services": {
+    "badge": "Our Services",
+    "title": "What We Do",
+    "subtitle": "From brand strategy to digital execution, we provide comprehensive marketing solutions that drive growth and build lasting connections.",
+    "items": {
+      "branding": {
+        "title": "Branding & Identity",
+        "description": "Create memorable brand experiences that resonate with your audience"
+      },
+      "marketing": {
+        "title": "Digital Marketing",
+        "description": "Strategic campaigns across all digital channels to maximize ROI"
+      },
+      "growth": {
+        "title": "Growth Strategy",
+        "description": "Data-driven approaches to scale your business and increase revenue"
+      },
+      "social": {
+        "title": "Social Media",
+        "description": "Build communities and engage audiences across social platforms"
+      }
+    },
+    "learnMore": "Learn More"
+  },
+  "whyChooseUs": {
+    "badge": "Why Choose Us",
+    "title": "The Creative Partner Your Brand Deserves",
+    "subtitle": "We don't just create campaigns – we build lasting partnerships that drive sustainable growth for your business.",
+    "items": {
+      "creative": {
+        "title": "Creative Strategy",
+        "description": "Innovative approaches that make your brand stand out"
+      },
+      "dataDriven": {
+        "title": "Data-Driven",
+        "description": "Every decision backed by insights and analytics"
+      },
+      "results": {
+        "title": "Results Oriented",
+        "description": "Focused on delivering measurable business outcomes"
+      }
+    }
+  },
+  "achievements": {
+    "badge": "Our Impact",
+    "title": "Success by the Numbers",
+    "subtitle": "These numbers represent real results for real businesses. Your success story could be next.",
+    "stats": {
+      "clients": "Happy Clients",
+      "campaigns": "Campaigns Launched",
+      "roi": "Average ROI",
+      "reach": "Reach Generated",
+      "impressions": "Impressions",
+      "trafficGrowth": "Traffic Growth"
+    },
+    "descriptions": {
+      "roiDesc": "E-commerce client saw 3x return on ad spend",
+      "impressionsDesc": "Social media campaign reach in 30 days",
+      "trafficDesc": "Organic website traffic increase in 6 months"
+    }
+  },
+  "portfolio": {
+    "badge": "Our Work",
+    "title": "Featured Projects",
+    "subtitle": "Explore some of our recent work and the impact we've made for our clients.",
+    "viewCaseStudy": "View Case Study",
+    "viewAllProjects": "View All Projects",
+    "categories": {
+      "branding": "Branding",
+      "socialMedia": "Social Media",
+      "webDesign": "Web Design"
+    }
+  },
+  "testimonials": {
+    "badge": "Client Love",
+    "title": "What Our Clients Say",
+    "subtitle": "Don't just take our word for it – hear from the brands we've helped transform."
+  },
+  "cta": {
+    "title": "Ready to Grow Your Brand?",
+    "subtitle": "Let's create something amazing together. Get in touch to start your transformation journey.",
+    "primary": "Get Free Consultation",
+    "secondary": "View Our Process"
+  },
+  "footer": {
+    "company": "CreativeFlow",
+    "description": "Transforming brands through creative marketing solutions and strategic innovation.",
+    "sections": {
+      "services": "Services",
+      "company": "Company",
+      "legal": "Legal"
+    },
+    "copyright": "All rights reserved."
+  },
+  "about": {
+    "hero": {
+      "title": "About CreativeFlow",
+      "subtitle": "We're a team of passionate creatives, strategists, and innovators dedicated to transforming brands through powerful storytelling and data-driven marketing."
+    },
+    "story": {
+      "title": "Our Story",
+      "description": "Founded in 2018, CreativeFlow emerged from a simple belief: that every brand has a unique story worth telling. What started as a small creative studio has grown into a full-service marketing agency, but our core mission remains the same – to create meaningful connections between brands and their audiences."
+    },
+    "mission": {
+      "title": "Our Mission",
+      "description": "To empower businesses of all sizes to achieve extraordinary growth through creative marketing solutions that captivate, engage, and convert."
+    },
+    "values": {
+      "title": "Our Values",
+      "items": {
+        "resultsDriver": {
+          "title": "Results-Driven",
+          "description": "Every campaign is built with measurable outcomes in mind"
+        },
+        "creative": {
+          "title": "Creative Innovation",
+          "description": "We push boundaries to create memorable brand experiences"
+        },
+        "collaborative": {
+          "title": "Collaborative",
+          "description": "Your success is our success through true partnership"
+        },
+        "excellence": {
+          "title": "Excellence",
+          "description": "We maintain the highest standards in everything we do"
+        }
+      }
+    },
+    "team": {
+      "title": "Meet Our Team",
+      "subtitle": "The creative minds behind your success"
+    }
+  },
+  "servicesPage": {
+    "hero": {
+      "title": "What We Can Do",
+      "titleHighlight": "For You",
+      "subtitle": "From brand development to digital marketing, we offer comprehensive solutions that drive growth and deliver measurable results for your business."
+    },
+    "services": {
+      "branding": {
+        "title": "Branding & Identity",
+        "description": "Complete brand development from logo design to brand guidelines that create lasting impressions.",
+        "features": ["Logo Design", "Brand Guidelines", "Visual Identity", "Brand Strategy"]
+      },
+      "social": {
+        "title": "Social Media Management",
+        "description": "Strategic social media campaigns that engage audiences and build community around your brand.",
+        "features": ["Content Creation", "Community Management", "Social Strategy", "Analytics & Reporting"]
+      },
+      "advertising": {
+        "title": "Paid Advertising",
+        "description": "Data-driven advertising campaigns across all major platforms to maximize ROI and reach.",
+        "features": ["Google Ads", "Facebook Ads", "LinkedIn Ads", "Campaign Optimization"]
+      },
+      "webDev": {
+        "title": "Web Design & Development",
+        "description": "Beautiful, responsive websites that convert visitors into customers and reflect your brand.",
+        "features": ["Custom Design", "Responsive Development", "E-commerce", "CMS Integration"]
+      },
+      "content": {
+        "title": "Content Marketing",
+        "description": "Compelling content strategies that tell your story and connect with your target audience.",
+        "features": ["Content Strategy", "Copywriting", "Video Production", "Email Marketing"]
+      },
+      "seo": {
+        "title": "SEO Strategy",
+        "description": "Comprehensive SEO solutions to improve your search rankings and drive organic traffic.",
+        "features": ["Keyword Research", "On-Page SEO", "Technical SEO", "Link Building"]
+      }
+    },
+    "process": {
+      "title": "Our Process",
+      "subtitle": "How we turn your vision into reality",
+      "steps": {
+        "discovery": {
+          "title": "Discovery",
+          "description": "We start by understanding your business, goals, and target audience through comprehensive research."
+        },
+        "strategy": {
+          "title": "Strategy",
+          "description": "Based on our findings, we develop a customized marketing strategy tailored to your needs."
+        },
+        "execution": {
+          "title": "Execution",
+          "description": "Our team brings the strategy to life with creative campaigns and technical implementation."
+        },
+        "optimization": {
+          "title": "Optimization",
+          "description": "We continuously monitor, analyze, and optimize campaigns for maximum performance and ROI."
+        }
+      }
+    }
+  },
+  "portfolioPage": {
+    "hero": {
+      "title": "Our Work",
+      "highlight": "Speaks Volumes",
+      "description": "Explore our portfolio of successful campaigns and brand transformations that have driven real results for our clients."
+    },
+    "filters": {
+      "all": "All",
+      "branding": "Branding",
+      "socialMedia": "Social Media",
+      "webDesign": "Web Design",
+      "advertising": "Paid Advertising",
+      "content": "Content Marketing"
+    },
+    "grid": {
+      "viewCase": "View Case Study"
+    },
+    "featured": {
+      "title": "Featured Case Studies",
+      "description": "Dive deeper into some of our most successful projects and the strategies that made them work.",
+      "badge": "Featured Case Study",
+      "caseTitle": "TechFlow Complete Rebrand",
+      "caseDescription": "When TechFlow approached us, they were struggling with brand recognition in a crowded market. Through comprehensive research and strategic brand development, we created a modern identity that truly represented their innovative spirit.",
+      "metric1": "Brand Recognition Increase",
+      "metric2": "Lead Generation Growth",
+      "readButton": "Read Full Case Study"
+    },
+    "testimonials": {
+      "title": "What Our Clients Say",
+      "testimonial1": {
+        "quote": "CreativeFlow transformed our brand completely. The results exceeded all our expectations.",
+        "name": "Sarah Chen",
+        "title": "CEO, TechFlow"
+      },
+      "testimonial2": {
+        "quote": "Their social media strategy doubled our engagement and brought in quality leads.",
+        "name": "Mike Rodriguez",
+        "title": "Founder, EcoLiving"
+      },
+      "testimonial3": {
+        "quote": "Professional, creative, and results-driven. Couldn't ask for a better partner.",
+        "name": "Lisa Park",
+        "title": "Marketing Director, FitZone"
+      }
+    },
+    "cta": {
+      "title": "Want to Work With Us on Something Amazing?",
+      "description": "Let's create your next success story together. Get in touch to discuss your project.",
+      "button": "Start Your Project"
+    }
+  },
+  "contactPage": {
+    "hero": {
+      "title": "Let's Work",
+      "highlight": "Together",
+      "description": "Ready to transform your brand and drive real results? Get in touch with our team and let's create something amazing together."
+    },
+    "form": {
+      "title": "Send Us a Message",
+      "subtitle": "Fill out the form below and we'll get back to you within 24 hours.",
+      "firstName": "First Name",
+      "firstNamePlaceholder": "John",
+      "lastName": "Last Name",
+      "lastNamePlaceholder": "Doe",
+      "email": "Email",
+      "emailPlaceholder": "john@example.com",
+      "company": "Company",
+      "companyPlaceholder": "Your Company",
+      "service": "Service Interest",
+      "servicePlaceholder": "Select a service",
+      "services": {
+        "branding": "Branding & Identity",
+        "social": "Social Media Management",
+        "advertising": "Paid Advertising",
+        "web": "Web Design & Development",
+        "content": "Content Marketing",
+        "seo": "SEO Strategy",
+        "other": "Other"
+      },
+      "budget": "Project Budget",
+      "budgetPlaceholder": "Select budget range",
+      "budgetOptions": {
+        "range1": "$5,000 - $10,000",
+        "range2": "$10,000 - $25,000",
+        "range3": "$25,000 - $50,000",
+        "range4": "$50,000+",
+        "discuss": "Let's discuss"
+      },
+      "message": "Message",
+      "messagePlaceholder": "Tell us about your project and goals...",
+      "submit": "Send Message"
+    },
+    "info": {
+      "title": "Get in Touch",
+      "subtitle": "We're here to help bring your vision to life. Reach out through any of the channels below.",
+      "email": {
+        "title": "Email Us",
+        "description": "Send us an email anytime"
+      },
+      "phone": {
+        "title": "Call Us",
+        "description": "Mon-Fri from 9am to 6pm"
+      },
+      "address": {
+        "title": "Visit Us",
+        "description": "Our creative studio"
+      },
+      "hours": {
+        "title": "Business Hours",
+        "details": "Mon-Fri: 9AM-6PM",
+        "description": "Weekend by appointment"
+      },
+      "map": "Interactive Map"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "subtitle": "Quick answers to common questions about our services and process.",
+      "question1": "How long does a typical project take?",
+      "answer1": "Project timelines vary depending on scope and complexity. A simple branding project might take 2-4 weeks, while a complete marketing campaign could take 2-3 months. We'll provide a detailed timeline during our initial consultation.",
+      "question2": "What's included in your marketing packages?",
+      "answer2": "Our packages are customized based on your needs but typically include strategy development, creative execution, campaign management, and detailed reporting. We'll create a tailored proposal after understanding your specific requirements.",
+      "question3": "Do you work with small businesses?",
+      "answer3": "Absolutely! We work with businesses of all sizes, from startups to enterprise companies. We believe every brand deserves exceptional marketing, and we tailor our services to fit different budgets and needs.",
+      "question4": "Can you help with both digital and traditional marketing?",
+      "answer4": "Yes, we offer comprehensive marketing services including both digital (social media, paid ads, SEO, web design) and traditional marketing strategies. We create integrated campaigns that work across all channels.",
+      "question5": "What makes Quest different?",
+      "answer5": "Our unique combination of creative expertise and data-driven strategy sets us apart. We don't just create beautiful campaigns – we ensure they deliver measurable results. Plus, our collaborative approach means you're involved every step of the way."
+    },
+    "cta": {
+      "title": "Ready to Start Your Project?",
+      "description": "Don't wait – let's discuss your goals and create a strategy that drives real results.",
+      "primaryButton": "Schedule Free Consultation",
+      "secondaryButton": "View Our Process"
+    }
+  },
+  "notFound": {
+    "message": "Oops! Page not found",
+    "returnHome": "Return to Home"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "success": "Success!",
+    "close": "Close",
+    "open": "Open",
+    "menu": "Menu",
+    "language": "Language",
+    "english": "English",
+    "arabic": "العربية"
+  }
+}
