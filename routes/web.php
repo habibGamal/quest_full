@@ -45,7 +45,7 @@ Route::get('/portfolio/{portfolioItem}', [PortfolioController::class, 'show']);
 
 Route::get('/contact', function () {
     return Inertia::render('Contact');
-});
+})->name('contact');
 
 Route::post('/contact', [App\Http\Controllers\ContactController::class, 'store'])->name('contact.store');
 

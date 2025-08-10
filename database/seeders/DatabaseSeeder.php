@@ -12,6 +12,7 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             PortfolioItemSeeder::class,
             ServiceSeeder::class,
+            SettingsSeeder::class,
         ]);
     }
 }
