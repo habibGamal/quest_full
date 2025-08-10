@@ -5,20 +5,20 @@
     "services": "Services",
     "portfolio": "Portfolio",
     "contact": "Contact",
-    "getStarted": "Get Started"
+    "getStarted": "Start Your Dive"
   },
   "hero": {
-    "badge": "Transform Your Brand Today",
+    "badge": "Your Growth Journey Starts Here",
     "title": {
-      "mystical": "Mystical",
+      "mystical": "Bold",
       "marketing": "Marketing",
-      "beyond": "Beyond Imagination"
+      "beyond": "Epic Results"
     },
-    "subtitle": "Dive into a world where creativity flows like magic. We craft enchanting brand experiences that",
-    "highlight": "captivate and convert.",
+    "subtitle": "At Quest, we guide brands on a journey to thrive. Dive into success with strategies that",
+    "highlight": "inspire, captivate, and convert.",
     "cta": {
-      "primary": "Let's Talk",
-      "secondary": "Watch Our Story"
+      "primary": "Start Your Dive",
+      "secondary": "Let's Talk"
     },
     "stats": {
       "clients": "Happy Clients",
@@ -29,50 +29,50 @@
   "services": {
     "badge": "Our Services",
     "title": "What We Do",
-    "subtitle": "From brand strategy to digital execution, we provide comprehensive marketing solutions that drive growth and build lasting connections.",
+    "subtitle": "From bold strategies to flawless execution, Quest delivers marketing solutions that drive growth and turn brands into success stories.",
     "items": {
       "branding": {
         "title": "Branding & Identity",
-        "description": "Create memorable brand experiences that resonate with your audience"
+        "description": "Craft powerful brand identities that resonate deeply with your audience and stand the test of time."
       },
       "marketing": {
         "title": "Digital Marketing",
-        "description": "Strategic campaigns across all digital channels to maximize ROI"
+        "description": "Create strategic, high-impact campaigns across every digital channel to boost awareness and maximize ROI."
       },
       "growth": {
         "title": "Growth Strategy",
-        "description": "Data-driven approaches to scale your business and increase revenue"
+        "description": "Leverage data-driven insights to scale your business and accelerate revenue growth."
       },
       "social": {
         "title": "Social Media",
-        "description": "Build communities and engage audiences across social platforms"
+        "description": "Build loyal communities and spark engagement across all major social platforms."
       }
     },
     "learnMore": "Learn More"
   },
   "whyChooseUs": {
     "badge": "Why Choose Us",
-    "title": "The Creative Partner Your Brand Deserves",
-    "subtitle": "We don't just create campaigns – we build lasting partnerships that drive sustainable growth for your business.",
+    "title": "Your Creative Partner in the Quest for Success",
+    "subtitle": "We don't just run campaigns — we craft journeys. At Quest, we blend strategy, creativity, and innovation to build lasting partnerships that fuel your brand's growth.",
     "items": {
       "creative": {
         "title": "Creative Strategy",
-        "description": "Innovative approaches that make your brand stand out"
+        "description": "Bold, innovative concepts that make your brand impossible to ignore"
       },
       "dataDriven": {
         "title": "Data-Driven",
-        "description": "Every decision backed by insights and analytics"
+        "description": "Every move guided by in-depth analytics and real-time insights"
       },
       "results": {
         "title": "Results Oriented",
-        "description": "Focused on delivering measurable business outcomes"
+        "description": "Laser-focused on delivering measurable growth and lasting impact"
       }
     }
   },
   "achievements": {
     "badge": "Our Impact",
     "title": "Success by the Numbers",
-    "subtitle": "These numbers represent real results for real businesses. Your success story could be next.",
+    "subtitle": "Every number tells a story of transformation. Your brand could be the next success we celebrate.",
     "stats": {
       "clients": "Happy Clients",
       "campaigns": "Campaigns Launched",
@@ -89,133 +89,200 @@
   },
   "portfolio": {
     "badge": "Our Work",
-    "title": "Featured Projects",
-    "subtitle": "Explore some of our recent work and the impact we've made for our clients.",
+    "title": "See Our Work In Action",
+    "subtitle": "Explore our portfolio of successful campaigns and projects that have helped brands achieve their goals and exceed expectations.",
     "viewCaseStudy": "View Case Study",
     "viewAllProjects": "View All Projects",
     "categories": {
       "branding": "Branding",
       "socialMedia": "Social Media",
-      "webDesign": "Web Design"
+      "webDesign": "Web Design",
+      "advertising": "Paid Advertising",
+      "content": "Content Marketing",
+      "graphics": "Graphic Design"
     }
   },
   "testimonials": {
     "badge": "Client Love",
     "title": "What Our Clients Say",
-    "subtitle": "Don't just take our word for it – hear from the brands we've helped transform."
+    "subtitle": "Don't just take our word for it – hear from the brands we've helped transform.",
+    "testimonial1": {
+      "quote": "Partnering with this agency transformed our online presence. Their targeted strategies boosted our website traffic by over 70% in just three months!",
+      "name": "Fatima Al-Mansouri",
+      "title": "Marketing Director, Al Noor Enterprises"
+    },
+    "testimonial2": {
+      "quote": "Their team delivered exceptional SEO and paid media results. We saw a measurable increase in qualified leads and conversions.",
+      "name": "Khalid Al-Fahad",
+      "title": "CEO, Riyadh Digital Hub"
+    },
+    "testimonial3": {
+      "quote": "From social media to email campaigns, their creative approach helped us connect with our audience like never before. Highly recommended!",
+      "name": "Layla Hassan",
+      "title": "Head of Communications, Zayna Tech"
+    }
   },
   "cta": {
     "title": "Ready to Grow Your Brand?",
-    "subtitle": "Let's create something amazing together. Get in touch to start your transformation journey.",
-    "primary": "Get Free Consultation",
-    "secondary": "View Our Process"
+    "subtitle": "Let's create something amazing together. Get in touch to start your digital transformation journey with expert marketing strategies that work.",
+    "primary": "Start Your Quest with Us",
+    "secondary": "Explore Our Digital Services"
   },
   "footer": {
-    "company": "CreativeFlow",
-    "description": "Transforming brands through creative marketing solutions and strategic innovation.",
+    "company": "Quest",
+    "description": "Dive Into Success - Our mission is to empower businesses by delivering powerful marketing solutions that combine creativity, data, and technology.",
     "sections": {
       "services": "Services",
       "company": "Company",
       "legal": "Legal"
     },
-    "copyright": "All rights reserved."
+    "copyright": "All rights reserved.",
+    "address": "Naqla Mall, Plot 9, Block 25033, Entertainment District, Obour City, Cairo, Egypt",
+    "email": "Info@questagency.com",
+    "hours": "Sun - Thu: 10AM-6PM"
   },
   "about": {
     "hero": {
-      "title": "About CreativeFlow",
-      "subtitle": "We're a team of passionate creatives, strategists, and innovators dedicated to transforming brands through powerful storytelling and data-driven marketing."
+      "title": "We Are Quest",
+      "subtitle": "At Quest, we blend strategy, creativity, and data to help ambitious brands grow. From SEO and content to performance marketing and analytics — we craft digital experiences that deliver real results and lasting impact."
     },
     "story": {
-      "title": "Our Story",
-      "description": "Founded in 2018, CreativeFlow emerged from a simple belief: that every brand has a unique story worth telling. What started as a small creative studio has grown into a full-service marketing agency, but our core mission remains the same – to create meaningful connections between brands and their audiences."
+      "title": "Our Journey",
+      "description": "Founded in 2025, Quest was born from a bold vision: to help brands navigate the fast-changing digital landscape with clarity, creativity, and purpose. Our founders saw an opportunity to merge innovative thinking with data-driven strategy, helping businesses grow not just bigger — but smarter. In a short time, we've partnered with forward-thinking clients across industries to deliver impactful campaigns that spark engagement, drive performance, and build lasting brand loyalty. At Quest, we don't just follow trends — we lead the way with solutions that are built for tomorrow."
     },
     "mission": {
       "title": "Our Mission",
-      "description": "To empower businesses of all sizes to achieve extraordinary growth through creative marketing solutions that captivate, engage, and convert."
+      "description": "Our mission is to empower businesses by delivering powerful marketing solutions that combine creativity, data, and technology. We partner with our clients to build memorable brands, drive growth, and connect with their audience across every platform."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "description": "To become the most trusted and innovative marketing agency in the region, transforming brands into market leaders through creativity, strategy, and measurable impact."
     },
     "values": {
-      "title": "Our Values",
+      "title": "What Drives Us",
+      "subtitle": "Our core values shape everything we do and guide us in creating exceptional work for our clients.",
       "items": {
-        "resultsDriver": {
-          "title": "Results-Driven",
-          "description": "Every campaign is built with measurable outcomes in mind"
+        "strategic": {
+          "title": "Strategic Thinking",
+          "description": "Every campaign begins with insight and intention — we build with purpose, backed by data."
         },
         "creative": {
           "title": "Creative Innovation",
-          "description": "We push boundaries to create memorable brand experiences"
+          "description": "We challenge conventional marketing with fresh ideas that spark emotion and action."
         },
         "collaborative": {
-          "title": "Collaborative",
-          "description": "Your success is our success through true partnership"
+          "title": "Client Partnership",
+          "description": "We grow together. Collaboration and transparency are at the core of every success story we create."
+        },
+        "agility": {
+          "title": "Agility",
+          "description": "In a fast-moving digital world, we stay adaptable and ahead of the curve — always learning, testing, and evolving."
         },
         "excellence": {
           "title": "Excellence",
-          "description": "We maintain the highest standards in everything we do"
+          "description": "From strategy to execution, we hold ourselves to the highest standards to deliver work that makes an impact."
         }
       }
     },
     "team": {
       "title": "Meet Our Team",
-      "subtitle": "The creative minds behind your success"
+      "subtitle": "The creative minds behind every successful campaign. We're passionate professionals who love what we do.",
+      "members": {
+        "magy": {
+          "name": "Magy Naguib",
+          "title": "Founder & CEO"
+        },
+        "abubakr": {
+          "name": "AbuBakr Maher",
+          "title": "Digital Marketing Manager"
+        },
+        "ammar": {
+          "name": "Ammar Sayed",
+          "title": "Graphic Designer"
+        },
+        "jasmine": {
+          "name": "Jasmine Barka",
+          "title": "Account Manager"
+        }
+      }
     }
   },
   "servicesPage": {
     "hero": {
       "title": "What We Can Do",
       "titleHighlight": "For You",
-      "subtitle": "From brand development to digital marketing, we offer comprehensive solutions that drive growth and deliver measurable results for your business."
+      "subtitle": "From bold strategies to flawless execution, Quest delivers marketing solutions that drive growth and turn brands into success stories."
     },
     "services": {
-      "branding": {
-        "title": "Branding & Identity",
-        "description": "Complete brand development from logo design to brand guidelines that create lasting impressions.",
-        "features": ["Logo Design", "Brand Guidelines", "Visual Identity", "Brand Strategy"]
-      },
-      "social": {
+      "socialManagement": {
         "title": "Social Media Management",
-        "description": "Strategic social media campaigns that engage audiences and build community around your brand.",
-        "features": ["Content Creation", "Community Management", "Social Strategy", "Analytics & Reporting"]
+        "description": "We manage your social media platforms with strategic planning, publishing, and engagement to grow your audience and build brand loyalty.",
+        "features": ["Social Media Strategy", "Community Management", "Scheduling", "Engagement", "Performance Reporting"]
       },
-      "advertising": {
-        "title": "Paid Advertising",
-        "description": "Data-driven advertising campaigns across all major platforms to maximize ROI and reach.",
-        "features": ["Google Ads", "Facebook Ads", "LinkedIn Ads", "Campaign Optimization"]
+      "socialDesign": {
+        "title": "Social Media Designs",
+        "description": "Eye-catching, brand-aligned social media creatives designed to capture attention and increase engagement across all platforms.",
+        "features": ["Custom Visual Posts", "Motion Graphics", "Platform-Specific Templates", "Brand Integration"]
+      },
+      "mediaBuying": {
+        "title": "Media Buying",
+        "description": "Maximize ROI with data-driven media buying strategies that place your brand in front of the right audience at the right time.",
+        "features": ["Meta Ads", "Google Ads", "TikTok Ads", "Snapchat Ads", "LinkedIn Ads", "E-Commerce Audience Targeting", "Campaign Optimization"]
       },
       "webDev": {
-        "title": "Web Design & Development",
-        "description": "Beautiful, responsive websites that convert visitors into customers and reflect your brand.",
-        "features": ["Custom Design", "Responsive Development", "E-commerce", "CMS Integration"]
+        "title": "Websites Development",
+        "description": "Custom, responsive websites that combine sleek design with powerful functionality — built to convert and scale with your business.",
+        "features": ["UX/UI Design", "Responsive Development", "E-commerce", "CMS Integration", "Speed Optimization"]
       },
-      "content": {
-        "title": "Content Marketing",
-        "description": "Compelling content strategies that tell your story and connect with your target audience.",
-        "features": ["Content Strategy", "Copywriting", "Video Production", "Email Marketing"]
+      "mediaProduction": {
+        "title": "Media Production",
+        "description": "Professional video and photography production tailored to tell your brand story and connect with your audience on a deeper level.",
+        "features": ["Video Shooting", "Editing", "Animation", "Photography", "Short-Form Content (Reels, TikToks)"]
+      },
+      "publicRelations": {
+        "title": "Public Relations",
+        "description": "Build a credible, visible brand through strategic PR that amplifies your voice across media outlets, influencers, and online platforms.",
+        "features": ["Press Releases", "Influencer Outreach", "Media Coverage", "Reputation Management"]
+      },
+      "contentCreation": {
+        "title": "Content Creation",
+        "description": "We craft impactful content — from copy to visuals — that drives conversations, clicks, and conversions.",
+        "features": ["Blog Writing", "Visual Content", "Scripts", "Storyboards", "Branded Content"]
       },
       "seo": {
-        "title": "SEO Strategy",
-        "description": "Comprehensive SEO solutions to improve your search rankings and drive organic traffic.",
-        "features": ["Keyword Research", "On-Page SEO", "Technical SEO", "Link Building"]
+        "title": "SEO (Search Engine Optimization)",
+        "description": "Boost your visibility and traffic with powerful SEO strategies built to rank your website on search engines and generate quality leads.",
+        "features": ["On-Page SEO", "Technical SEO", "Keyword Research", "Link Building", "Performance Reporting"]
+      },
+      "accountManagement": {
+        "title": "Account Management",
+        "description": "Dedicated account managers who serve as your strategic partners — ensuring smooth communication, reporting, and execution of all campaigns.",
+        "features": ["Strategy Alignment", "Client Communication", "Performance Tracking", "Monthly Reporting"]
       }
     },
     "process": {
       "title": "Our Process",
-      "subtitle": "How we turn your vision into reality",
+      "subtitle": "How we work with clients to deliver exceptional results through a proven methodology.",
       "steps": {
         "discovery": {
-          "title": "Discovery",
-          "description": "We start by understanding your business, goals, and target audience through comprehensive research."
+          "title": "Discovery & Strategy",
+          "description": "We begin by understanding your brand, goals, audience, and challenges — then develop a tailored strategy to guide all efforts."
         },
-        "strategy": {
-          "title": "Strategy",
-          "description": "Based on our findings, we develop a customized marketing strategy tailored to your needs."
+        "planning": {
+          "title": "Creative Planning",
+          "description": "Our team crafts content ideas, design direction, and messaging strategies that align with your vision and market positioning."
         },
         "execution": {
-          "title": "Execution",
-          "description": "Our team brings the strategy to life with creative campaigns and technical implementation."
+          "title": "Execution & Production",
+          "description": "From social media design to website development and media production, we bring the strategy to life with precision and creativity."
         },
-        "optimization": {
-          "title": "Optimization",
-          "description": "We continuously monitor, analyze, and optimize campaigns for maximum performance and ROI."
+        "launch": {
+          "title": "Launch & Optimization",
+          "description": "Campaigns go live! We monitor performance in real-time, making data-driven adjustments to maximize impact."
+        },
+        "reporting": {
+          "title": "Reporting & Growth",
+          "description": "We provide clear, insightful reports — and use those insights to evolve and scale your success over time."
         }
       }
     }
@@ -223,8 +290,8 @@
   "portfolioPage": {
     "hero": {
       "title": "Our Work",
-      "highlight": "Speaks Volumes",
-      "description": "Explore our portfolio of successful campaigns and brand transformations that have driven real results for our clients."
+      "highlight": "In Action",
+      "description": "Explore our portfolio of successful campaigns and projects that have helped brands achieve their goals and exceed expectations."
     },
     "filters": {
       "all": "All",
@@ -232,7 +299,8 @@
       "socialMedia": "Social Media",
       "webDesign": "Web Design",
       "advertising": "Paid Advertising",
-      "content": "Content Marketing"
+      "content": "Content Marketing",
+      "graphics": "Graphic Design"
     },
     "grid": {
       "viewCase": "View Case Study"
@@ -241,8 +309,8 @@
       "title": "Featured Case Studies",
       "description": "Dive deeper into some of our most successful projects and the strategies that made them work.",
       "badge": "Featured Case Study",
-      "caseTitle": "TechFlow Complete Rebrand",
-      "caseDescription": "When TechFlow approached us, they were struggling with brand recognition in a crowded market. Through comprehensive research and strategic brand development, we created a modern identity that truly represented their innovative spirit.",
+      "caseTitle": "Brand Transformation Success",
+      "caseDescription": "When this client approached us, they were struggling with brand recognition in a crowded market. Through comprehensive research and strategic brand development, we created a modern identity that truly represented their innovative spirit.",
       "metric1": "Brand Recognition Increase",
       "metric2": "Lead Generation Growth",
       "readButton": "Read Full Case Study"
@@ -250,19 +318,19 @@
     "testimonials": {
       "title": "What Our Clients Say",
       "testimonial1": {
-        "quote": "CreativeFlow transformed our brand completely. The results exceeded all our expectations.",
-        "name": "Sarah Chen",
-        "title": "CEO, TechFlow"
+        "quote": "Partnering with this agency transformed our online presence. Their targeted strategies boosted our website traffic by over 70% in just three months!",
+        "name": "Fatima Al-Mansouri",
+        "title": "Marketing Director, Al Noor Enterprises"
       },
       "testimonial2": {
-        "quote": "Their social media strategy doubled our engagement and brought in quality leads.",
-        "name": "Mike Rodriguez",
-        "title": "Founder, EcoLiving"
+        "quote": "Their team delivered exceptional SEO and paid media results. We saw a measurable increase in qualified leads and conversions.",
+        "name": "Khalid Al-Fahad",
+        "title": "CEO, Riyadh Digital Hub"
       },
       "testimonial3": {
-        "quote": "Professional, creative, and results-driven. Couldn't ask for a better partner.",
-        "name": "Lisa Park",
-        "title": "Marketing Director, FitZone"
+        "quote": "From social media to email campaigns, their creative approach helped us connect with our audience like never before. Highly recommended!",
+        "name": "Layla Hassan",
+        "title": "Head of Communications, Zayna Tech"
       }
     },
     "cta": {
@@ -280,6 +348,8 @@
     "form": {
       "title": "Send Us a Message",
       "subtitle": "Fill out the form below and we'll get back to you within 24 hours.",
+      "name": "Name",
+      "namePlaceholder": "Your Full Name",
       "firstName": "First Name",
       "firstNamePlaceholder": "John",
       "lastName": "Last Name",
@@ -291,12 +361,14 @@
       "service": "Service Interest",
       "servicePlaceholder": "Select a service",
       "services": {
-        "branding": "Branding & Identity",
-        "social": "Social Media Management",
-        "advertising": "Paid Advertising",
-        "web": "Web Design & Development",
-        "content": "Content Marketing",
-        "seo": "SEO Strategy",
+        "socialManagement": "Social Media Management",
+        "socialDesign": "Social Media Designs",
+        "mediaBuying": "Media Buying",
+        "webDev": "Websites Development",
+        "mediaProduction": "Media Production",
+        "publicRelations": "Public Relations",
+        "contentCreation": "Content Creation",
+        "seo": "SEO",
         "other": "Other"
       },
       "budget": "Project Budget",
@@ -317,19 +389,22 @@
       "subtitle": "We're here to help bring your vision to life. Reach out through any of the channels below.",
       "email": {
         "title": "Email Us",
-        "description": "Send us an email anytime"
+        "description": "Send us an email anytime",
+        "value": "Info@questagency.com"
       },
       "phone": {
         "title": "Call Us",
-        "description": "Mon-Fri from 9am to 6pm"
+        "description": "Sun-Thu from 10am to 6pm",
+        "value": "+20 109 111 5510"
       },
       "address": {
         "title": "Visit Us",
-        "description": "Our creative studio"
+        "description": "Our creative studio",
+        "value": "Naqla Mall, Plot 9, Block 25033, Entertainment District, Obour City, Cairo, Egypt"
       },
       "hours": {
         "title": "Business Hours",
-        "details": "Mon-Fri: 9AM-6PM",
+        "details": "Sun-Thu: 10AM-6PM",
         "description": "Weekend by appointment"
       },
       "map": "Interactive Map"
@@ -338,15 +413,17 @@
       "title": "Frequently Asked Questions",
       "subtitle": "Quick answers to common questions about our services and process.",
       "question1": "How long does a typical project take?",
-      "answer1": "Project timelines vary depending on scope and complexity. A simple branding project might take 2-4 weeks, while a complete marketing campaign could take 2-3 months. We'll provide a detailed timeline during our initial consultation.",
-      "question2": "What's included in your marketing packages?",
-      "answer2": "Our packages are customized based on your needs but typically include strategy development, creative execution, campaign management, and detailed reporting. We'll create a tailored proposal after understanding your specific requirements.",
-      "question3": "Do you work with small businesses?",
-      "answer3": "Absolutely! We work with businesses of all sizes, from startups to enterprise companies. We believe every brand deserves exceptional marketing, and we tailor our services to fit different budgets and needs.",
-      "question4": "Can you help with both digital and traditional marketing?",
-      "answer4": "Yes, we offer comprehensive marketing services including both digital (social media, paid ads, SEO, web design) and traditional marketing strategies. We create integrated campaigns that work across all channels.",
-      "question5": "What makes Quest different?",
-      "answer5": "Our unique combination of creative expertise and data-driven strategy sets us apart. We don't just create beautiful campaigns – we ensure they deliver measurable results. Plus, our collaborative approach means you're involved every step of the way."
+      "answer1": "Project timelines vary based on scope and deliverables. For example, a social media campaign can launch within 3-5 Days, while website development may take 1 week. We provide a clear timeline upfront for every project, and we stick to it.",
+      "question2": "What's included in your packages?",
+      "answer2": "Each package is tailored to your brand's needs. Our services typically include strategy development, creative production, platform management, and performance reporting, Media Buying, Branding. Whether you're looking for full-service digital marketing or a single solution, we've got you covered.",
+      "question3": "Do you work with small businesses or startups?",
+      "answer3": "Absolutely! We're passionate about helping startups and small businesses grow. Our flexible packages and collaborative approach make it easy for any brand to access world-class digital marketing — regardless of size.",
+      "question4": "What makes your agency different?",
+      "answer4": "At Quest, we combine creativity, strategy, and data to deliver work that performs — not just looks good. Our team becomes an extension of yours, providing personalized support, full transparency, and results that speak for themselves.",
+      "question5": "What is your payment structure?",
+      "answer5": "We offer flexible payment options depending on the scope of work — including monthly retainers, milestone-based billing, or project-based fees. You'll always receive a clear proposal and agreement before we begin.",
+      "question6": "Do you offer ongoing support after launch?",
+      "answer6": "Yes, we do. Whether it's social media management, SEO monitoring, website updates, or content creation, we offer retainer-based support packages to ensure your digital presence stays fresh and effective."
     },
     "cta": {
       "title": "Ready to Start Your Project?",
@@ -355,9 +432,185 @@
       "secondaryButton": "View Our Process"
     }
   },
+  "privacyPolicy": {
+    "hero": {
+      "title": "Privacy Policy",
+      "subtitle": "We value your privacy and are committed to protecting your personal information. This policy explains how we collect, use, and safeguard your data.",
+      "lastUpdated": "Last updated"
+    },
+    "introduction": {
+      "title": "Introduction",
+      "content": "Quest Digital Marketing Agency ('we', 'our', or 'us') is committed to protecting and respecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services. Please read this privacy policy carefully. If you do not agree with the terms of this privacy policy, please do not access the site or use our services."
+    },
+    "dataCollection": {
+      "title": "Information We Collect",
+      "intro": "We may collect information about you in a variety of ways. The information we may collect includes:",
+      "personal": {
+        "title": "Personal Information",
+        "items": {
+          "name": "Name and contact information (email address, phone number)",
+          "email": "Email address for communication and service delivery",
+          "phone": "Phone number for direct communication",
+          "company": "Company information and business details",
+          "project": "Project requirements and business objectives"
+        }
+      },
+      "technical": {
+        "title": "Technical Information",
+        "items": {
+          "ip": "IP address and location data",
+          "browser": "Browser type and version",
+          "device": "Device information and operating system",
+          "usage": "Website usage patterns and preferences"
+        }
+      }
+    },
+    "dataUsage": {
+      "title": "How We Use Your Information",
+      "intro": "We use the information we collect for various purposes, including:",
+      "items": {
+        "respond": "To respond to your inquiries and provide customer service",
+        "services": "To deliver and improve our marketing services",
+        "improve": "To analyze and improve our website and services",
+        "communicate": "To communicate with you about our services and updates",
+        "legal": "To comply with legal obligations and protect our rights"
+      }
+    },
+    "dataSharing": {
+      "title": "Information Sharing and Disclosure",
+      "content": "We do not sell, trade, or otherwise transfer your personal information to third parties without your consent, except in the following circumstances:",
+      "items": {
+        "consent": "With your explicit consent or at your direction",
+        "legal": "To comply with legal obligations or respond to legal requests",
+        "business": "In connection with a business transfer or merger"
+      }
+    },
+    "dataSecurity": {
+      "title": "Data Security",
+      "content": "We implement appropriate security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the internet or electronic storage is 100% secure, and we cannot guarantee absolute security."
+    },
+    "userRights": {
+      "title": "Your Rights",
+      "intro": "Depending on your location, you may have certain rights regarding your personal information:",
+      "items": {
+        "access": "The right to access and receive a copy of your personal information",
+        "correct": "The right to correct or update your personal information",
+        "delete": "The right to delete your personal information",
+        "restrict": "The right to restrict the processing of your personal information",
+        "portability": "The right to data portability",
+        "object": "The right to object to the processing of your personal information"
+      }
+    },
+    "cookies": {
+      "title": "Cookies and Tracking Technologies",
+      "content": "We use cookies and similar tracking technologies to enhance your experience on our website. You can control cookie settings through your browser preferences. Some features of our website may not function properly if cookies are disabled."
+    },
+    "changes": {
+      "title": "Changes to This Privacy Policy",
+      "content": "We may update this Privacy Policy from time to time to reflect changes in our practices or legal requirements. We will notify you of any material changes by posting the new Privacy Policy on our website and updating the 'Last Updated' date."
+    },
+    "contact": {
+      "title": "Contact Us",
+      "content": "If you have any questions or concerns about this Privacy Policy or our data practices, please contact us:"
+    }
+  },
+  "termsOfService": {
+    "hero": {
+      "title": "Terms of Service",
+      "subtitle": "These terms and conditions outline the rules and regulations for the use of Quest Digital Marketing Agency's services and website.",
+      "lastUpdated": "Last updated"
+    },
+    "introduction": {
+      "title": "Introduction",
+      "content": "Welcome to Quest Digital Marketing Agency. These Terms of Service ('Terms') govern your use of our website and services. By accessing our website or engaging our services, you agree to be bound by these Terms. If you disagree with any part of these terms, then you may not access our services."
+    },
+    "acceptance": {
+      "title": "Acceptance of Terms",
+      "content": "By accessing and using our services, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service."
+    },
+    "services": {
+      "title": "Services Description",
+      "intro": "Quest Digital Marketing Agency provides comprehensive digital marketing services including but not limited to:",
+      "items": {
+        "socialMedia": "Social media management and marketing",
+        "webDevelopment": "Website development and design",
+        "mediaBuying": "Media buying and advertising campaigns",
+        "branding": "Brand development and identity design",
+        "contentCreation": "Content creation and marketing",
+        "seo": "Search engine optimization (SEO)",
+        "consultation": "Digital marketing consultation and strategy"
+      }
+    },
+    "userResponsibilities": {
+      "title": "User Responsibilities",
+      "intro": "As a user of our services, you agree to:",
+      "items": {
+        "accurate": "Provide accurate and complete information",
+        "lawful": "Use our services in a lawful manner",
+        "timely": "Provide timely feedback and approvals",
+        "materials": "Ensure you have rights to any materials provided to us",
+        "communication": "Maintain professional communication standards"
+      }
+    },
+    "payment": {
+      "title": "Payment Terms",
+      "content": "Payment terms are specified in individual service agreements. Generally, our payment terms include:",
+      "invoicing": {
+        "title": "Invoicing and Payment",
+        "content": "Invoices are issued according to the agreed schedule. Payment is due within 30 days of invoice date unless otherwise specified."
+      },
+      "late": {
+        "title": "Late Payments",
+        "content": "Late payments may result in service suspension and additional fees. We reserve the right to charge interest on overdue amounts."
+      }
+    },
+    "intellectualProperty": {
+      "title": "Intellectual Property Rights",
+      "ownership": {
+        "title": "Our Intellectual Property",
+        "content": "All content, trademarks, and intellectual property on our website and in our services remain the property of Quest Digital Marketing Agency unless otherwise specified."
+      },
+      "client": {
+        "title": "Client-Provided Materials",
+        "content": "You retain ownership of materials provided to us, but grant us a license to use them for the agreed services."
+      },
+      "thirdParty": {
+        "title": "Third-Party Resources",
+        "content": "We may use third-party resources in our services. Usage rights and licenses for such resources are governed by their respective terms."
+      }
+    },
+    "confidentiality": {
+      "title": "Confidentiality",
+      "content": "We respect the confidentiality of your business information and will not disclose confidential information to third parties without your consent, except as required by law or as necessary to provide our services."
+    },
+    "liability": {
+      "title": "Limitation of Liability",
+      "content": "Our liability is limited to the amount paid for the specific service in question. We are not liable for indirect, incidental, or consequential damages. We do not guarantee specific results from our marketing services as results depend on various factors beyond our control."
+    },
+    "termination": {
+      "title": "Termination",
+      "content": "Either party may terminate services with appropriate notice as specified in the service agreement. Upon termination, you remain responsible for payment of services rendered up to the termination date."
+    },
+    "governingLaw": {
+      "title": "Governing Law",
+      "content": "These Terms are governed by and construed in accordance with the laws of Egypt. Any disputes arising from these Terms will be resolved in the courts of Cairo, Egypt."
+    },
+    "changes": {
+      "title": "Changes to Terms",
+      "content": "We reserve the right to modify these Terms at any time. Changes will be effective immediately upon posting on our website. Your continued use of our services after changes constitutes acceptance of the new Terms."
+    },
+    "contact": {
+      "title": "Contact Information",
+      "content": "If you have any questions about these Terms of Service, please contact us:"
+    }
+  },
   "notFound": {
     "message": "Oops! Page not found",
     "returnHome": "Return to Home"
+  },
+  "whatsapp": {
+    "defaultMessage": "Hello! I'm interested in your digital marketing services.",
+    "tooltip": "Chat with us on WhatsApp"
   },
   "common": {
     "loading": "Loading...",

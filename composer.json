@@ -17,6 +17,7 @@
         "php": "^8.2",
         "filament/filament": "^3.2",
         "inertiajs/inertia-laravel": "^2.0",
+        "joshembling/image-optimizer": "^1.5",
         "laravel/framework": "^11.9",
         "laravel/pail": "^1.2",
         "laravel/sanctum": "^4.0",

@@ -1,11 +1,13 @@
 import Navigation from "@/Components/Navigation";
 import Footer from "@/Components/Footer";
 import AnimatedBackground from "@/Components/AnimatedBackground";
+import WhatsAppFloat from "@/Components/WhatsAppFloat";
 import { Button } from "@/Components/ui/button";
 import { Card, CardContent } from "@/Components/ui/card";
 import { Badge } from "@/Components/ui/badge";
 import { useTranslation } from 'react-i18next';
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, User } from "lucide-react";
+import { Link } from '@inertiajs/react';
 
 interface PortfolioItem {
   id: number;
@@ -99,7 +101,7 @@ const Portfolio = ({ portfolioItems: databaseItems = [], featuredItems = [] }: P
     t('portfolioPage.filters.webDesign'),
     t('portfolioPage.filters.advertising'),
     t('portfolioPage.filters.content'),
-    "SEO"
+    t('portfolioPage.filters.graphics')
   ];
 
   return (
@@ -149,10 +151,6 @@ const Portfolio = ({ portfolioItems: databaseItems = [], featuredItems = [] }: P
                     className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <Button size="sm" className="bg-white text-primary hover:bg-white/90">
-                      <ExternalLink className="h-4 w-4 mr-2 rtl:ml-2 rtl:mr-0" />
-                      {t('portfolioPage.grid.viewCase')}
-                    </Button>
                   </div>
                 </div>
                 <CardContent className="p-6">
@@ -212,9 +210,11 @@ const Portfolio = ({ portfolioItems: databaseItems = [], featuredItems = [] }: P
                   <div className="text-muted-foreground">{t('portfolioPage.featured.metric2')}</div>
                 </div>
               </div>
-              <Button className="btn-gradient">
-                {t('portfolioPage.featured.readButton')}
-              </Button>
+              <Link href="/contact">
+                <Button className="btn-gradient">
+                  {t('contactPage.cta.primaryButton')}
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
@@ -233,11 +233,9 @@ const Portfolio = ({ portfolioItems: databaseItems = [], featuredItems = [] }: P
                   {t('portfolioPage.testimonials.testimonial1.quote')}
                 </p>
                 <div className="flex items-center space-x-4 rtl:space-x-reverse">
-                  <img
-                    src="https://images.unsplash.com/photo-1494790108755-2616b612d5fd?w=50&h=50&fit=crop&crop=face"
-                    alt="Client"
-                    className="w-12 h-12 rounded-full"
-                  />
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                    <User className="w-6 h-6 text-primary" />
+                  </div>
                   <div>
                     <div className="font-semibold">{t('portfolioPage.testimonials.testimonial1.name')}</div>
                     <div className="text-sm text-muted-foreground">{t('portfolioPage.testimonials.testimonial1.title')}</div>
@@ -251,11 +249,9 @@ const Portfolio = ({ portfolioItems: databaseItems = [], featuredItems = [] }: P
                   {t('portfolioPage.testimonials.testimonial2.quote')}
                 </p>
                 <div className="flex items-center space-x-4 rtl:space-x-reverse">
-                  <img
-                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=50&h=50&fit=crop&crop=face"
-                    alt="Client"
-                    className="w-12 h-12 rounded-full"
-                  />
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                    <User className="w-6 h-6 text-primary" />
+                  </div>
                   <div>
                     <div className="font-semibold">{t('portfolioPage.testimonials.testimonial2.name')}</div>
                     <div className="text-sm text-muted-foreground">{t('portfolioPage.testimonials.testimonial2.title')}</div>
@@ -269,11 +265,9 @@ const Portfolio = ({ portfolioItems: databaseItems = [], featuredItems = [] }: P
                   {t('portfolioPage.testimonials.testimonial3.quote')}
                 </p>
                 <div className="flex items-center space-x-4 rtl:space-x-reverse">
-                  <img
-                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=50&h=50&fit=crop&crop=face"
-                    alt="Client"
-                    className="w-12 h-12 rounded-full"
-                  />
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                    <User className="w-6 h-6 text-primary" />
+                  </div>
                   <div>
                     <div className="font-semibold">{t('portfolioPage.testimonials.testimonial3.name')}</div>
                     <div className="text-sm text-muted-foreground">{t('portfolioPage.testimonials.testimonial3.title')}</div>
@@ -292,13 +286,16 @@ const Portfolio = ({ portfolioItems: databaseItems = [], featuredItems = [] }: P
           <p className="text-xl text-muted-foreground mb-8">
             {t('portfolioPage.cta.description')}
           </p>
-          <Button className="btn-gradient text-lg px-8 py-4">
-            {t('portfolioPage.cta.button')}
-          </Button>
+          <Link href="/contact">
+            <Button className="btn-gradient text-lg px-8 py-4">
+              {t('portfolioPage.cta.button')}
+            </Button>
+          </Link>
         </div>
       </section>
 
       <Footer />
+      <WhatsAppFloat />
     </div>
   );
 };

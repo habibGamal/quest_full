@@ -39,6 +39,7 @@ class HandleInertiaRequests extends Middleware
                 'en' => 'English',
                 'ar' => 'العربية',
             ],
+            'settings' => settings(),
         ];
     }
 }

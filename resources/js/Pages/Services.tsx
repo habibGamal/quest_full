@@ -1,11 +1,17 @@
 import Navigation from "@/Components/Navigation";
 import Footer from "@/Components/Footer";
 import AnimatedBackground from "@/Components/AnimatedBackground";
+import WhatsAppFloat from "@/Components/WhatsAppFloat";
 import { Button } from "@/Components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/Components/ui/card";
 import { Badge } from "@/Components/ui/badge";
 import { useTranslation } from 'react-i18next';
-import { Palette, Share2, Target, Code, PenTool, Search } from "lucide-react";
+import { Palette, Share2, Target, Code, PenTool, Search, Camera, Users, FileText } from "lucide-react";
+import { Link } from '@inertiajs/react';
+
+interface Feature {
+  feature: string;
+}
 
 interface Service {
   id: number;
@@ -13,7 +19,7 @@ interface Service {
   title: string;
   description: string;
   category?: string;
-  features: string[];
+  features: Feature[];
 }
 
 interface ServicesProps {
@@ -32,61 +38,87 @@ const iconMap = {
 const Services = ({ services: databaseServices = [] }: ServicesProps) => {
   const { t } = useTranslation();
 
-  // Map database services to include icon components
-  const services = databaseServices.map(service => {
-    const IconComponent = iconMap[service.icon as keyof typeof iconMap] || Palette;
-    return {
-      id: service.id,
-      iconComponent: <IconComponent className="h-12 w-12 text-primary" />,
-      title: service.title,
-      description: service.description,
-      features: service.features,
-    };
-  });
+  // Helper function to convert string array to Feature array
+  const convertToFeatures = (features: string[] | Feature[]): Feature[] => {
+    if (features.length === 0) return [];
+    if (typeof features[0] === 'string') {
+      return (features as string[]).map(feature => ({ feature }));
+    }
+    return features as Feature[];
+  };
 
-  // Fallback to translation-based services if no database data
+  // Map database services to include icon components
+  const services = databaseServices.map((service) => {
+    const IconComponent = iconMap[service.icon as keyof typeof iconMap];
+    return {
+      ...service,
+      iconComponent: IconComponent ? <IconComponent className="h-12 w-12 text-primary" /> : null,
+      features: convertToFeatures(service.features),
+    };
+  });  // Fallback to translation-based services if no database data
   const fallbackServices = [
     {
       id: 1,
-      iconComponent: <Palette className="h-12 w-12 text-primary" />,
-      title: t('servicesPage.services.branding.title'),
-      description: t('servicesPage.services.branding.description'),
-      features: t('servicesPage.services.branding.features', { returnObjects: true }) as string[],
+      iconComponent: <Share2 className="h-12 w-12 text-primary" />,
+      title: t('servicesPage.services.socialManagement.title'),
+      description: t('servicesPage.services.socialManagement.description'),
+      features: convertToFeatures(t('servicesPage.services.socialManagement.features', { returnObjects: true }) as string[]),
     },
     {
       id: 2,
-      iconComponent: <Share2 className="h-12 w-12 text-primary" />,
-      title: t('servicesPage.services.social.title'),
-      description: t('servicesPage.services.social.description'),
-      features: t('servicesPage.services.social.features', { returnObjects: true }) as string[],
+      iconComponent: <Palette className="h-12 w-12 text-primary" />,
+      title: t('servicesPage.services.socialDesign.title'),
+      description: t('servicesPage.services.socialDesign.description'),
+      features: convertToFeatures(t('servicesPage.services.socialDesign.features', { returnObjects: true }) as string[]),
     },
     {
       id: 3,
       iconComponent: <Target className="h-12 w-12 text-primary" />,
-      title: t('servicesPage.services.advertising.title'),
-      description: t('servicesPage.services.advertising.description'),
-      features: t('servicesPage.services.advertising.features', { returnObjects: true }) as string[],
+      title: t('servicesPage.services.mediaBuying.title'),
+      description: t('servicesPage.services.mediaBuying.description'),
+      features: convertToFeatures(t('servicesPage.services.mediaBuying.features', { returnObjects: true }) as string[]),
     },
     {
       id: 4,
       iconComponent: <Code className="h-12 w-12 text-primary" />,
       title: t('servicesPage.services.webDev.title'),
       description: t('servicesPage.services.webDev.description'),
-      features: t('servicesPage.services.webDev.features', { returnObjects: true }) as string[],
+      features: convertToFeatures(t('servicesPage.services.webDev.features', { returnObjects: true }) as string[]),
     },
     {
       id: 5,
-      iconComponent: <PenTool className="h-12 w-12 text-primary" />,
-      title: t('servicesPage.services.content.title'),
-      description: t('servicesPage.services.content.description'),
-      features: t('servicesPage.services.content.features', { returnObjects: true }) as string[],
+      iconComponent: <Camera className="h-12 w-12 text-primary" />,
+      title: t('servicesPage.services.mediaProduction.title'),
+      description: t('servicesPage.services.mediaProduction.description'),
+      features: convertToFeatures(t('servicesPage.services.mediaProduction.features', { returnObjects: true }) as string[]),
     },
     {
       id: 6,
+      iconComponent: <FileText className="h-12 w-12 text-primary" />,
+      title: t('servicesPage.services.publicRelations.title'),
+      description: t('servicesPage.services.publicRelations.description'),
+      features: convertToFeatures(t('servicesPage.services.publicRelations.features', { returnObjects: true }) as string[]),
+    },
+    {
+      id: 7,
+      iconComponent: <PenTool className="h-12 w-12 text-primary" />,
+      title: t('servicesPage.services.contentCreation.title'),
+      description: t('servicesPage.services.contentCreation.description'),
+      features: convertToFeatures(t('servicesPage.services.contentCreation.features', { returnObjects: true }) as string[]),
+    },
+    {
+      id: 8,
       iconComponent: <Search className="h-12 w-12 text-primary" />,
       title: t('servicesPage.services.seo.title'),
       description: t('servicesPage.services.seo.description'),
-      features: t('servicesPage.services.seo.features', { returnObjects: true }) as string[],
+      features: convertToFeatures(t('servicesPage.services.seo.features', { returnObjects: true }) as string[]),
+    },
+    {
+      id: 9,
+      iconComponent: <Users className="h-12 w-12 text-primary" />,
+      title: t('servicesPage.services.accountManagement.title'),
+      description: t('servicesPage.services.accountManagement.description'),
+      features: convertToFeatures(t('servicesPage.services.accountManagement.features', { returnObjects: true }) as string[]),
     },
   ];
 
@@ -100,8 +132,8 @@ const Services = ({ services: databaseServices = [] }: ServicesProps) => {
     },
     {
       step: "02",
-      title: t('servicesPage.process.steps.strategy.title'),
-      description: t('servicesPage.process.steps.strategy.description'),
+      title: t('servicesPage.process.steps.planning.title'),
+      description: t('servicesPage.process.steps.planning.description'),
     },
     {
       step: "03",
@@ -110,8 +142,13 @@ const Services = ({ services: databaseServices = [] }: ServicesProps) => {
     },
     {
       step: "04",
-      title: t('servicesPage.process.steps.optimization.title'),
-      description: t('servicesPage.process.steps.optimization.description'),
+      title: t('servicesPage.process.steps.launch.title'),
+      description: t('servicesPage.process.steps.launch.description'),
+    },
+    {
+      step: "05",
+      title: t('servicesPage.process.steps.reporting.title'),
+      description: t('servicesPage.process.steps.reporting.description'),
     },
   ];
 
@@ -148,13 +185,15 @@ const Services = ({ services: databaseServices = [] }: ServicesProps) => {
                     {service.features.map((feature, idx) => (
                       <li key={idx} className="flex items-center rtl:space-x-reverse space-x-3">
                         <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0"></div>
-                        <span className="text-sm">{feature}</span>
+                        <span className="text-sm">{typeof feature === 'string' ? feature : feature.feature}</span>
                       </li>
                     ))}
                   </ul>
-                  <Button variant="outline" className="w-full mt-6">
-                    {t('services.learnMore')}
-                  </Button>
+                  <Link href="/contact">
+                    <Button variant="outline" className="w-full mt-6">
+                      {t('services.learnMore')}
+                    </Button>
+                  </Link>
                 </CardContent>
               </Card>
             ))}
@@ -171,14 +210,55 @@ const Services = ({ services: databaseServices = [] }: ServicesProps) => {
               {t('servicesPage.process.subtitle')}
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+          {/* Desktop/Tablet: Horizontal Flow */}
+          <div className="hidden lg:block">
+            <div className="relative">
+              {/* Connection Line */}
+              <div className="absolute top-8 left-8 right-8 h-0.5 bg-gradient-to-r from-primary via-purple-500 to-primary opacity-30"></div>
+
+              <div className="grid grid-cols-5 gap-8">
+                {processSteps.map((step, index) => (
+                  <div key={index} className="relative text-center animate-slide-up" style={{ animationDelay: `${index * 0.1}s` }}>
+                    {/* Step Circle */}
+                    <div className="relative z-10 w-16 h-16 bg-gradient-to-br from-primary to-purple-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-6 shadow-lg hover:scale-110 transition-transform duration-300">
+                      {step.step}
+                      {/* Glow Effect */}
+                      <div className="absolute inset-0 bg-gradient-to-br from-primary to-purple-600 rounded-full blur-lg opacity-50 scale-150"></div>
+                    </div>
+
+                    {/* Content Card */}
+                    <div className="bg-background rounded-xl p-6 shadow-lg border border-border/50 hover:shadow-xl transition-all duration-300 group">
+                      <h3 className="text-lg font-semibold mb-3 group-hover:text-primary transition-colors">{step.title}</h3>
+                      <p className="text-muted-foreground text-sm leading-relaxed">{step.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Mobile: Vertical Flow */}
+          <div className="lg:hidden space-y-8">
             {processSteps.map((step, index) => (
-              <div key={index} className="text-center animate-slide-up">
-                <div className="w-16 h-16 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
-                  {step.step}
+              <div key={index} className="relative animate-slide-up" style={{ animationDelay: `${index * 0.1}s` }}>
+                <div className="flex items-start space-x-4">
+                  {/* Step Circle */}
+                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-primary to-purple-600 text-white rounded-full flex items-center justify-center text-lg font-bold shadow-lg">
+                    {step.step}
+                  </div>
+
+                  {/* Content */}
+                  <div className="flex-1">
+                    <h3 className="text-lg font-semibold mb-2">{step.title}</h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed">{step.description}</p>
+                  </div>
                 </div>
-                <h3 className="text-xl font-semibold mb-3">{step.title}</h3>
-                <p className="text-muted-foreground">{step.description}</p>
+
+                {/* Connection Line (except for last item) */}
+                {index < processSteps.length - 1 && (
+                  <div className="ml-6 mt-4 w-0.5 h-8 bg-gradient-to-b from-primary to-transparent opacity-30"></div>
+                )}
               </div>
             ))}
           </div>
@@ -228,17 +308,22 @@ const Services = ({ services: databaseServices = [] }: ServicesProps) => {
             {t('cta.subtitle')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="btn-gradient text-lg px-8 py-4">
-              {t('cta.primary')}
-            </Button>
-            <Button variant="outline" className="text-lg px-8 py-4">
-              {t('portfolio.viewAllProjects')}
-            </Button>
+            <Link href="/contact">
+              <Button className="btn-gradient text-lg px-8 py-4">
+                {t('cta.primary')}
+              </Button>
+            </Link>
+            <Link href="/portfolio">
+              <Button variant="outline" className="text-lg px-8 py-4">
+                {t('portfolio.viewAllProjects')}
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
 
       <Footer />
+      <WhatsAppFloat />
     </div>
   );
 };

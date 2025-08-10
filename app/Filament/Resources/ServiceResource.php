@@ -29,6 +29,13 @@ class ServiceResource extends Resource
                             ->label('Icon Class')
                             ->required()
                             ->placeholder('e.g., heroicon-o-palette')
+                            ->suffixAction(
+                                Forms\Components\Actions\Action::make('icon_preview')
+                                    ->label('Preview Icon')
+                                    ->url('https://lucide.dev/icons/')
+                                    ->openUrlInNewTab()
+                                    ->icon('heroicon-o-link')
+                            )
                             ->maxLength(255),
                         Forms\Components\Toggle::make('is_active')
                             ->label('Active')

@@ -11,3 +11,16 @@ if (! function_exists('example')) {
         return 'This is an example function you can use in your project.';
     }
 }
+
+if (! function_exists('settings')) {
+    function settings(?string $key = null, $default = null)
+    {
+        $settingsService = app(\App\Services\SettingsService::class);
+
+        if ($key === null) {
+            return $settingsService->getSettings();
+        }
+
+        return $settingsService->get($key, $default);
+    }
+}

@@ -2,10 +2,12 @@ import Navigation from "@/Components/Navigation";
 import Footer from "@/Components/Footer";
 import AnimatedBackground from "@/Components/AnimatedBackground";
 import LanguageTest from "@/Components/LanguageTest";
+import WhatsAppFloat from "@/Components/WhatsAppFloat";
 import { Button } from "@/Components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/Components/ui/card";
 import { Badge } from "@/Components/ui/badge";
 import { useTranslation } from 'react-i18next';
+import { Link } from '@inertiajs/react';
 import {
   Palette,
   Target,
@@ -19,10 +21,25 @@ import {
   CheckCircle,
   Sparkles,
   Rocket,
-  Globe
+  Globe,
+  User
 } from "lucide-react";
 
-const Index = () => {
+interface FeaturedProject {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+  category: string;
+  tags: string[];
+  results: string;
+}
+
+interface IndexProps {
+  featuredProjects?: FeaturedProject[];
+}
+
+const Index = ({ featuredProjects = [] }: IndexProps) => {
   const { t } = useTranslation();
   const services = [
     {
@@ -66,51 +83,63 @@ const Index = () => {
   ];
 
   const achievements = [
-    { number: "200+", label: t('achievements.stats.clients') },
+    { number: "50+", label: t('achievements.stats.clients') },
     { number: "500+", label: t('achievements.stats.campaigns') },
     { number: "300%", label: t('achievements.stats.roi') },
-    { number: "50M+", label: t('achievements.stats.reach') }
+    { number: "10M+", label: t('achievements.stats.reach') }
   ];
 
-  const featuredProjects = [
+  // Fallback projects if none are provided from the server
+  const fallbackProjects: FeaturedProject[] = [
     {
+      id: 1,
       title: "TechFlow Rebrand",
       description: "Complete brand transformation resulting in 40% increase in recognition",
       image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=300&fit=crop",
-      category: t('portfolio.categories.branding')
+      category: t('portfolio.categories.branding'),
+      tags: ["Branding", "Design"],
+      results: "40% increase in recognition"
     },
     {
+      id: 2,
       title: "EcoLiving Campaign",
       description: "Social media strategy that doubled engagement and generated quality leads",
       image: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=400&h=300&fit=crop",
-      category: t('portfolio.categories.socialMedia')
+      category: t('portfolio.categories.socialMedia'),
+      tags: ["Social Media", "Campaign"],
+      results: "Doubled engagement"
     },
     {
+      id: 3,
       title: "FitZone Website",
       description: "Modern web design that increased online bookings by 300%",
       image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop",
-      category: t('portfolio.categories.webDesign')
+      category: t('portfolio.categories.webDesign'),
+      tags: ["Web Design", "Development"],
+      results: "300% increase in bookings"
     }
   ];
 
+  const displayProjects = featuredProjects.length > 0 ? featuredProjects : fallbackProjects;
+
   const testimonials = [
     {
-      quote: "CreativeFlow transformed our brand completely. The results exceeded all expectations.",
-      author: "Sarah Chen",
-      role: "CEO, TechFlow",
-      avatar: "https://images.unsplash.com/photo-1494790108755-2616b612d5fd?w=60&h=60&fit=crop&crop=face"
+      quote: t('testimonials.testimonial1.quote'),
+      author: t('testimonials.testimonial1.name'),
+      role: t('testimonials.testimonial1.title'),
+      icon: <User className="w-12 h-12 text-primary" />
     },
     {
-      quote: "Their strategic approach to social media doubled our engagement in just 3 months.",
-      author: "Mike Rodriguez",
-      role: "Founder, EcoLiving",
-      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&h=60&fit=crop&crop=face"
+      quote: t('testimonials.testimonial2.quote'),
+      author: t('testimonials.testimonial2.name'),
+      role: t('testimonials.testimonial2.title'),
+      icon: <User className="w-12 h-12 text-primary" />
     },
     {
-      quote: "Professional, creative, and results-driven. The best marketing partner we've had.",
-      author: "Lisa Park",
-      role: "Marketing Director, FitZone",
-      avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=60&h=60&fit=crop&crop=face"
+      quote: t('testimonials.testimonial3.quote'),
+      author: t('testimonials.testimonial3.name'),
+      role: t('testimonials.testimonial3.title'),
+      icon: <User className="w-12 h-12 text-primary" />
     }
   ];
 
@@ -118,7 +147,6 @@ const Index = () => {
     "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=120&h=60&fit=crop",
     "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=120&h=60&fit=crop",
     "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=120&h=60&fit=crop",
-    "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=120&h=60&fit=crop",
     "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=120&h=60&fit=crop"
   ];
 
@@ -175,13 +203,15 @@ const Index = () => {
 
               {/* CTA Buttons with Enhanced Animation */}
               <div className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start">
-                <Button className="relative group overflow-hidden bg-gradient-to-r from-primary via-purple-600 to-primary bg-[length:200%] animate-gradient text-white text-lg px-10 py-5 rounded-2xl font-bold shadow-2xl hover:shadow-primary/25 transition-all duration-500 animate-glow">
-                  <span className="relative z-10 flex items-center">
-                    {t('hero.cta.primary')}
-                    <ArrowRight className="ml-3 rtl:mr-3 rtl:ml-0 rtl:rotate-180 h-6 w-6 group-hover:translate-x-1 rtl:group-hover:-translate-x-1 transition-transform" />
-                  </span>
-                  <div className="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 skew-x-12"></div>
-                </Button>
+                <Link href="/contact">
+                  <Button className="relative group overflow-hidden bg-gradient-to-r from-primary via-purple-600 to-primary bg-[length:200%] animate-gradient text-white text-lg px-10 py-5 rounded-2xl font-bold shadow-2xl hover:shadow-primary/25 transition-all duration-500 animate-glow">
+                    <span className="relative z-10 flex items-center">
+                      {t('hero.cta.primary')}
+                      <ArrowRight className="ml-3 rtl:mr-3 rtl:ml-0 rtl:rotate-180 h-6 w-6 group-hover:translate-x-1 rtl:group-hover:-translate-x-1 transition-transform" />
+                    </span>
+                    <div className="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 skew-x-12"></div>
+                  </Button>
+                </Link>
 
                 <Button variant="outline" className="group border-2 border-primary/30 text-primary hover:border-primary hover:bg-primary/5 text-lg px-10 py-5 rounded-2xl font-bold backdrop-blur-sm">
                   <div className="flex items-center">
@@ -197,7 +227,7 @@ const Index = () => {
               {/* Floating Statistics */}
               <div className="grid grid-cols-3 gap-8 mt-16 text-center lg:text-left rtl:lg:text-right">
                 <div className="group">
-                  <div className="text-3xl font-bold text-gradient mb-1 group-hover:scale-110 transition-transform">200+</div>
+                  <div className="text-3xl font-bold text-gradient mb-1 group-hover:scale-110 transition-transform">30+</div>
                   <div className="text-sm text-muted-foreground">{t('hero.stats.clients')}</div>
                 </div>
                 <div className="group">
@@ -205,7 +235,7 @@ const Index = () => {
                   <div className="text-sm text-muted-foreground">{t('hero.stats.roi')}</div>
                 </div>
                 <div className="group">
-                  <div className="text-3xl font-bold text-gradient mb-1 group-hover:scale-110 transition-transform">50M+</div>
+                  <div className="text-3xl font-bold text-gradient mb-1 group-hover:scale-110 transition-transform">10M+</div>
                   <div className="text-sm text-muted-foreground">{t('hero.stats.reach')}</div>
                 </div>
               </div>
@@ -255,7 +285,7 @@ const Index = () => {
       <section className="py-12 px-4 bg-secondary">
         <div className="max-w-7xl mx-auto">
           <p className="text-center text-muted-foreground mb-8 font-medium">
-            Trusted by innovative brands worldwide
+            Trusted by brands charting their path to success
           </p>
           <div className="flex flex-wrap items-center justify-center gap-8 opacity-60">
             {clientLogos.map((logo, index) => (
@@ -291,9 +321,11 @@ const Index = () => {
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">{service.description}</p>
-                  <Button variant="ghost" className="mt-4 group-hover:text-primary">
-                    {t('services.learnMore')} <ArrowRight className="ml-2 rtl:mr-2 rtl:ml-0 rtl:rotate-180 h-4 w-4" />
-                  </Button>
+                  <Link href="/contact">
+                    <Button variant="ghost" className="mt-4 group-hover:text-primary">
+                      {t('services.learnMore')} <ArrowRight className="ml-2 rtl:mr-2 rtl:ml-0 rtl:rotate-180 h-4 w-4" />
+                    </Button>
+                  </Link>
                 </CardContent>
               </Card>
             ))}
@@ -372,8 +404,8 @@ const Index = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {featuredProjects.map((project, index) => (
-              <Card key={index} className="card-hover overflow-hidden group">
+            {displayProjects.map((project, index) => (
+              <Card key={project.id} className="card-hover overflow-hidden group">
                 <div className="relative overflow-hidden">
                   <img
                     src={project.image}
@@ -387,17 +419,26 @@ const Index = () => {
                 <CardContent className="p-6">
                   <h3 className="text-xl font-semibold mb-3">{project.title}</h3>
                   <p className="text-muted-foreground mb-4">{project.description}</p>
-                  <Button variant="ghost" className="p-0 h-auto font-semibold text-primary">
-                    {t('portfolio.viewCaseStudy')} <ArrowRight className="ml-2 rtl:mr-2 rtl:ml-0 rtl:rotate-180 h-4 w-4" />
-                  </Button>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {project.tags.map((tag, tagIndex) => (
+                      <Badge key={tagIndex} variant="outline" className="text-xs">
+                        {tag}
+                      </Badge>
+                    ))}
+                  </div>
+                  <div className="pt-4 border-t">
+                    <p className="text-sm font-medium text-primary">{project.results}</p>
+                  </div>
                 </CardContent>
               </Card>
             ))}
           </div>
           <div className="text-center mt-12">
-            <Button className="btn-outline-gradient">
-              {t('portfolio.viewAllProjects')}
-            </Button>
+            <Link href="/portfolio">
+              <Button className="btn-outline-gradient">
+                {t('portfolio.viewAllProjects')}
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
@@ -425,11 +466,9 @@ const Index = () => {
                     "{testimonial.quote}"
                   </blockquote>
                   <div className="flex items-center space-x-4 rtl:space-x-reverse">
-                    <img
-                      src={testimonial.avatar}
-                      alt={testimonial.author}
-                      className="w-12 h-12 rounded-full"
-                    />
+                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                      {testimonial.icon}
+                    </div>
                     <div>
                       <div className="font-semibold">{testimonial.author}</div>
                       <div className="text-sm text-muted-foreground">{testimonial.role}</div>
@@ -452,18 +491,23 @@ const Index = () => {
             {t('cta.subtitle')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-white text-primary hover:bg-white/90 text-lg px-8 py-4">
-              <CheckCircle className="mr-2 rtl:ml-2 rtl:mr-0 h-5 w-5" />
-              {t('cta.primary')}
-            </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary text-lg px-8 py-4">
-              {t('cta.secondary')}
-            </Button>
+            <Link href="/contact">
+              <Button size="lg" className="bg-white text-primary hover:bg-white/90 text-lg px-8 py-4">
+                <CheckCircle className="mr-2 rtl:ml-2 rtl:mr-0 h-5 w-5" />
+                {t('cta.primary')}
+              </Button>
+            </Link>
+            <Link href="/contact">
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary text-lg px-8 py-4">
+                {t('cta.secondary')}
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
 
       <Footer />
+      <WhatsAppFloat />
     </div>
   );
 };

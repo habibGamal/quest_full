@@ -4,7 +4,19 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title inertia>{{ config('app.name', 'Laravel') }}</title>
+        <title inertia>{{ settings('title', config('app.name', 'Laravel')) }}</title>
+
+        <!-- Meta Description -->
+        @if(settings('meta_description'))
+            <meta name="description" content="{{ settings('meta_description') }}">
+        @endif
+
+        <!-- Favicon -->
+        @if(settings('favicon'))
+            <link rel="icon" type="image/x-icon" href="{{ settings('favicon') }}">
+        @else
+            <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
+        @endif
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">

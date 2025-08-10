@@ -1,6 +1,7 @@
 import Navigation from "@/Components/Navigation";
 import Footer from "@/Components/Footer";
 import AnimatedBackground from "@/Components/AnimatedBackground";
+import WhatsAppFloat from "@/Components/WhatsAppFloat";
 import { Button } from "@/Components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/Components/ui/card";
 import { Input } from "@/Components/ui/input";
@@ -10,26 +11,50 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Mail, Phone, MapPin, Clock, ChevronDown } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/Components/ui/accordion";
 import { useTranslation } from 'react-i18next';
+import { useForm, usePage } from '@inertiajs/react';
+import { FormEventHandler, useState } from 'react';
+import { PageProps } from '@/types';
 
-const Contact = () => {
+const Contact = ({ flash }: { flash?: { success?: string; error?: string } }) => {
   const { t } = useTranslation();
+  const [selectedService, setSelectedService] = useState('');
+  const { settings } = usePage<PageProps>().props;
+
+  const { data, setData, post, processing, errors, reset } = useForm({
+    name: '',
+    email: '',
+    company: '',
+    service: '',
+    message: '',
+  });
+
+  const submit: FormEventHandler = (e) => {
+    e.preventDefault();
+
+    post(route('contact.store'), {
+      onSuccess: () => {
+        reset();
+        setSelectedService('');
+      },
+    });
+  };
   const contactInfo = [
     {
       icon: <Mail className="h-6 w-6 text-primary" />,
       title: t('contactPage.info.email.title'),
-      details: "hello@questagency.com",
+      details: (settings.official_email as string) || t('contactPage.info.email.value'),
       description: t('contactPage.info.email.description'),
     },
     {
       icon: <Phone className="h-6 w-6 text-primary" />,
       title: t('contactPage.info.phone.title'),
-      details: "+1 (555) 123-4567",
+      details: (settings.whatsapp_number as string) || t('contactPage.info.phone.value'),
       description: t('contactPage.info.phone.description'),
     },
     {
       icon: <MapPin className="h-6 w-6 text-primary" />,
       title: t('contactPage.info.address.title'),
-      details: "123 Creative Street, New York, NY 10001",
+      details: t('contactPage.info.address.value'),
       description: t('contactPage.info.address.description'),
     },
     {
@@ -61,6 +86,10 @@ const Contact = () => {
       question: t('contactPage.faq.question5'),
       answer: t('contactPage.faq.answer5'),
     },
+    {
+      question: t('contactPage.faq.question6'),
+      answer: t('contactPage.faq.answer6'),
+    },
   ];
 
   return (
@@ -83,7 +112,7 @@ const Contact = () => {
       {/* Contact Form & Info */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12  items-start">
             {/* Contact Form */}
             <Card className="p-8 animate-slide-up">
               <CardHeader className="px-0 pt-0">
@@ -93,67 +122,82 @@ const Contact = () => {
                 </p>
               </CardHeader>
               <CardContent className="px-0">
-                <form className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div className="space-y-2">
-                      <Label htmlFor="firstName">{t('contactPage.form.firstName')}</Label>
-                      <Input id="firstName" placeholder={t('contactPage.form.firstNamePlaceholder')} />
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="lastName">{t('contactPage.form.lastName')}</Label>
-                      <Input id="lastName" placeholder={t('contactPage.form.lastNamePlaceholder')} />
-                    </div>
+                {flash?.success && (
+                  <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg">
+                    <p className="text-green-800">{flash.success}</p>
+                  </div>
+                )}
+                {flash?.error && (
+                  <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg">
+                    <p className="text-red-800">{flash.error}</p>
+                  </div>
+                )}
+                <form onSubmit={submit} className="space-y-6">
+                  <div className="space-y-2">
+                    <Label htmlFor="name">{t('contactPage.form.name')}</Label>
+                    <Input
+                      id="name"
+                      placeholder={t('contactPage.form.namePlaceholder')}
+                      value={data.name}
+                      onChange={e => setData('name', e.target.value)}
+                      className={errors.name ? 'border-red-500' : ''}
+                    />
+                    {errors.name && <p className="text-red-500 text-sm">{errors.name}</p>}
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="email">{t('contactPage.form.email')}</Label>
-                    <Input id="email" type="email" placeholder={t('contactPage.form.emailPlaceholder')} />
+                    <Input
+                      id="email"
+                      type="email"
+                      placeholder={t('contactPage.form.emailPlaceholder')}
+                      value={data.email}
+                      onChange={e => setData('email', e.target.value)}
+                      className={errors.email ? 'border-red-500' : ''}
+                    />
+                    {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="company">{t('contactPage.form.company')}</Label>
-                    <Input id="company" placeholder={t('contactPage.form.companyPlaceholder')} />
+                    <Input
+                      id="company"
+                      placeholder={t('contactPage.form.companyPlaceholder')}
+                      value={data.company}
+                      onChange={e => setData('company', e.target.value)}
+                    />
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="service">{t('contactPage.form.service')}</Label>
-                    <Select>
-                      <SelectTrigger>
+                    <Select value={selectedService} onValueChange={(value) => { setSelectedService(value); setData('service', value); }}>
+                      <SelectTrigger className={errors.service ? 'border-red-500' : ''}>
                         <SelectValue placeholder={t('contactPage.form.servicePlaceholder')} />
                       </SelectTrigger>
                       <SelectContent>
-                        <SelectItem value="branding">{t('contactPage.form.services.branding')}</SelectItem>
-                        <SelectItem value="social">{t('contactPage.form.services.social')}</SelectItem>
-                        <SelectItem value="advertising">{t('contactPage.form.services.advertising')}</SelectItem>
-                        <SelectItem value="web">{t('contactPage.form.services.web')}</SelectItem>
-                        <SelectItem value="content">{t('contactPage.form.services.content')}</SelectItem>
+                        <SelectItem value="socialManagement">{t('contactPage.form.services.socialManagement')}</SelectItem>
+                        <SelectItem value="socialDesign">{t('contactPage.form.services.socialDesign')}</SelectItem>
+                        <SelectItem value="mediaBuying">{t('contactPage.form.services.mediaBuying')}</SelectItem>
+                        <SelectItem value="webDev">{t('contactPage.form.services.webDev')}</SelectItem>
+                        <SelectItem value="mediaProduction">{t('contactPage.form.services.mediaProduction')}</SelectItem>
+                        <SelectItem value="publicRelations">{t('contactPage.form.services.publicRelations')}</SelectItem>
+                        <SelectItem value="contentCreation">{t('contactPage.form.services.contentCreation')}</SelectItem>
                         <SelectItem value="seo">{t('contactPage.form.services.seo')}</SelectItem>
                         <SelectItem value="other">{t('contactPage.form.services.other')}</SelectItem>
                       </SelectContent>
                     </Select>
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="budget">{t('contactPage.form.budget')}</Label>
-                    <Select>
-                      <SelectTrigger>
-                        <SelectValue placeholder={t('contactPage.form.budgetPlaceholder')} />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="5k-10k">{t('contactPage.form.budgetOptions.range1')}</SelectItem>
-                        <SelectItem value="10k-25k">{t('contactPage.form.budgetOptions.range2')}</SelectItem>
-                        <SelectItem value="25k-50k">{t('contactPage.form.budgetOptions.range3')}</SelectItem>
-                        <SelectItem value="50k+">{t('contactPage.form.budgetOptions.range4')}</SelectItem>
-                        <SelectItem value="discuss">{t('contactPage.form.budgetOptions.discuss')}</SelectItem>
-                      </SelectContent>
-                    </Select>
+                    {errors.service && <p className="text-red-500 text-sm">{errors.service}</p>}
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="message">{t('contactPage.form.message')}</Label>
                     <Textarea
                       id="message"
                       placeholder={t('contactPage.form.messagePlaceholder')}
-                      className="min-h-[120px]"
+                      className={`min-h-[120px] ${errors.message ? 'border-red-500' : ''}`}
+                      value={data.message}
+                      onChange={e => setData('message', e.target.value)}
                     />
+                    {errors.message && <p className="text-red-500 text-sm">{errors.message}</p>}
                   </div>
-                  <Button className="btn-gradient w-full text-lg py-3">
-                    {t('contactPage.form.submit')}
+                  <Button type="submit" disabled={processing} className="btn-gradient w-full text-lg py-3">
+                    {processing ? 'Sending...' : t('contactPage.form.submit')}
                   </Button>
                 </form>
               </CardContent>
@@ -191,7 +235,7 @@ const Contact = () => {
                   <div className="text-center">
                     <MapPin className="h-12 w-12 text-primary mx-auto mb-4" />
                     <p className="text-muted-foreground">{t('contactPage.info.map')}</p>
-                    <p className="text-sm text-muted-foreground">123 Creative Street, New York, NY</p>
+                    <p className="text-sm text-muted-foreground">Naqla Mall, Obour City, Cairo, Egypt</p>
                   </div>
                 </div>
               </Card>
@@ -244,6 +288,7 @@ const Contact = () => {
       </section>
 
       <Footer />
+      <WhatsAppFloat />
     </div>
   );
 };
