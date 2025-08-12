@@ -22,7 +22,7 @@ const Contact = ({ flash }: { flash?: { success?: string; error?: string } }) =>
 
   const { data, setData, post, processing, errors, reset } = useForm({
     name: '',
-    email: '',
+    phone: '',
     company: '',
     service: '',
     message: '',
@@ -145,16 +145,16 @@ const Contact = ({ flash }: { flash?: { success?: string; error?: string } }) =>
                     {errors.name && <p className="text-red-500 text-sm">{errors.name}</p>}
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="email">{t('contactPage.form.email')}</Label>
+                    <Label htmlFor="phone">{t('contactPage.form.phone')}</Label>
                     <Input
-                      id="email"
-                      type="email"
-                      placeholder={t('contactPage.form.emailPlaceholder')}
-                      value={data.email}
-                      onChange={e => setData('email', e.target.value)}
-                      className={errors.email ? 'border-red-500' : ''}
+                      id="phone"
+                      type="tel"
+                      placeholder={t('contactPage.form.phonePlaceholder')}
+                      value={data.phone}
+                      onChange={e => setData('phone', e.target.value)}
+                      className={errors.phone ? 'border-red-500' : ''}
                     />
-                    {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
+                    {errors.phone && <p className="text-red-500 text-sm">{errors.phone}</p>}
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="company">{t('contactPage.form.company')}</Label>
@@ -229,15 +229,18 @@ const Contact = ({ flash }: { flash?: { success?: string; error?: string } }) =>
                 ))}
               </div>
 
-              {/* Map Placeholder */}
+              {/* Map */}
               <Card className="overflow-hidden">
-                <div className="h-64 bg-gradient-to-br from-primary/10 to-purple-600/10 flex items-center justify-center">
-                  <div className="text-center">
-                    <MapPin className="h-12 w-12 text-primary mx-auto mb-4" />
-                    <p className="text-muted-foreground">{t('contactPage.info.map')}</p>
-                    <p className="text-sm text-muted-foreground">Naqla Mall, Obour City, Cairo, Egypt</p>
-                  </div>
-                </div>
+                <iframe
+                  src="https://www.google.com/maps?q=30.237539291381836,31.45273780822754&z=17&hl=en&output=embed"
+                  width="100%"
+                  height="256"
+                  style={{ border: 0 }}
+                  allowFullScreen={true}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Quest Digital Marketing Location"
+                />
               </Card>
             </div>
           </div>

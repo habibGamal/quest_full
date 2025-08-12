@@ -12,29 +12,6 @@ import { Link } from '@inertiajs/react';
 const About = () => {
   const { t } = useTranslation();
 
-  const teamMembers = [
-    {
-      name: t('about.team.members.magy.name'),
-      role: t('about.team.members.magy.title'),
-      image: "https://images.unsplash.com/photo-1616434116710-c45ce99c1a77?w=400&auto=format&fit=crop&crop=face",
-    },
-    {
-      name: t('about.team.members.abubakr.name'),
-      role: t('about.team.members.abubakr.title'),
-      image: "https://images.unsplash.com/photo-1718209881007-c0ecdfc00f9d?w=400&auto=format&fit=crop&crop=face",
-    },
-    {
-      name: t('about.team.members.ammar.name'),
-      role: t('about.team.members.ammar.title'),
-      image: "https://images.unsplash.com/photo-1597961220560-2c8bf7298017?w=400&auto=format&fit=crop&crop=face",
-    },
-    {
-      name: t('about.team.members.jasmine.name'),
-      role: t('about.team.members.jasmine.title'),
-      image: "https://images.unsplash.com/photo-1664575602554-2087b04935a5?w=400&auto=format&fit=crop&crop=face",
-    },
-  ];
-
   const values = [
     {
       icon: <Target className="h-8 w-8 text-primary" />,
@@ -151,33 +128,6 @@ const About = () => {
                   </div>
                   <h3 className="text-lg font-semibold mb-3 group-hover:text-primary transition-colors">{value.title}</h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">{value.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Meet the Team */}
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">{t('about.team.title')}</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              {t('about.team.subtitle')}
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {teamMembers.map((member, index) => (
-              <Card key={index} className="card-hover overflow-hidden">
-                <img
-                  src={member.image}
-                  alt={member.name}
-                  className="w-full h-64 object-cover"
-                />
-                <CardContent className="p-6 text-center">
-                  <h3 className="text-xl font-semibold mb-2">{member.name}</h3>
-                  <p className="text-primary font-medium">{member.role}</p>
                 </CardContent>
               </Card>
             ))}

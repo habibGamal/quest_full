@@ -76,8 +76,8 @@
         </div>
 
         <div class="field">
-            <span class="field-label">Email:</span>
-            <div class="field-value">{{ $data['email'] }}</div>
+            <span class="field-label">Phone Number:</span>
+            <div class="field-value">{{ $data['phone'] }}</div>
         </div>
 
         @if(!empty($data['company']))

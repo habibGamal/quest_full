@@ -23,7 +23,7 @@ class ContactFormRequest extends FormRequest
     {
         return [
             'name' => 'required|string|max:255',
-            'email' => 'required|email|max:255',
+            'phone' => 'required|string|max:20',
             'company' => 'nullable|string|max:255',
             'service' => 'required|string|max:255',
             'message' => 'required|string|min:10',
@@ -39,8 +39,7 @@ class ContactFormRequest extends FormRequest
     {
         return [
             'name.required' => 'Name is required.',
-            'email.required' => 'Email is required.',
-            'email.email' => 'Please enter a valid email address.',
+            'phone.required' => 'Phone number is required.',
             'service.required' => 'Please select a service.',
             'message.required' => 'Message is required.',
             'message.min' => 'Message must be at least 10 characters.',

@@ -144,10 +144,16 @@ const Index = ({ featuredProjects = [] }: IndexProps) => {
   ];
 
   const clientLogos = [
-    "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=120&h=60&fit=crop",
-    "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=120&h=60&fit=crop",
-    "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=120&h=60&fit=crop",
-    "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=120&h=60&fit=crop"
+    "/assets/1.png",
+    "/assets/2.png",
+    "/assets/3.png",
+    "/assets/4.png",
+    "/assets/5.png",
+    "/assets/6.png",
+    "/assets/7.png",
+    "/assets/8.png",
+    "/assets/9.png",
+    "/assets/10.png",
   ];
 
   return (
@@ -159,15 +165,26 @@ const Index = ({ featuredProjects = [] }: IndexProps) => {
       <section className="relative min-h-screen flex items-center justify-center pt-20 pb-16 px-4 overflow-hidden">
         {/* Video Background */}
         <div className="absolute inset-0 w-full h-full z-0">
+          {/* Desktop/Tablet video */}
           <video
             autoPlay
             loop
             muted
             playsInline
-            className="absolute inset-0 w-full h-full object-cover"
+            className="hidden md:block absolute inset-0 w-full h-full object-cover"
           >
             <source src="/assets/hero.mp4" type="video/mp4" />
-            {/* Fallback for browsers that don't support video */}
+            Your browser does not support the video tag.
+          </video>
+          {/* Mobile video */}
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="block md:hidden absolute inset-0 w-full h-full object-cover"
+          >
+            <source src="/assets/hero_mobile.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
           {/* Dark overlay for better text readability */}
@@ -249,7 +266,7 @@ const Index = ({ featuredProjects = [] }: IndexProps) => {
               {/* Main Image Container */}
               <div className="relative group">
                 <img
-                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=700&h=600&fit=crop"
+                  src="/assets/hero.png"
                   alt="Creative team collaboration"
                   className="relative rounded-3xl shadow-2xl transform group-hover:scale-105 transition-transform duration-700 border border-white/10"
                 />
@@ -361,7 +378,7 @@ const Index = ({ featuredProjects = [] }: IndexProps) => {
             </div>
             <div className="animate-scale-in">
               <img
-                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=500&fit=crop"
+                src="/assets/why--site.png"
                 alt="Strategy and analytics"
                 className="rounded-2xl shadow-lg"
               />
