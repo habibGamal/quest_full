@@ -411,7 +411,7 @@ const Index = ({ featuredProjects = [] }: IndexProps) => {
       </section>
 
       {/* Featured Projects */}
-      <section className="py-20 px-4 bg-secondary">
+      {/* <section className="py-20 px-4 bg-secondary">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <Badge className="mb-4">{t('portfolio.badge')}</Badge>
@@ -458,7 +458,7 @@ const Index = ({ featuredProjects = [] }: IndexProps) => {
             </Link>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Testimonials */}
       <section className="py-20 px-4">
