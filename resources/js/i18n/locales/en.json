@@ -7,6 +7,9 @@
         "contact": "Contact",
         "getStarted": "Start Your Dive"
     },
+    "clientLogos": {
+        "trustedBy": "Our Clients"
+    },
     "hero": {
         "badge": "Your Growth Journey Starts Here",
         "title": {
@@ -119,7 +122,7 @@
         "testimonial3": {
             "quote": "From social media to email campaigns, their creative approach helped us connect with our audience like never before. Highly recommended!",
             "name": "Layla Hassan",
-            "title": "Head of Communications, Zayna Tech"
+            "title": "Head of Communications, Zayna Kenz Tech"
         }
     },
     "cta": {
@@ -131,10 +134,23 @@
     "footer": {
         "company": "Quest",
         "description": "Dive Into Success - Our mission is to empower businesses by delivering powerful marketing solutions that combine creativity, data, and technology.",
+        "quickLinks": "Quick Links",
+        "contactInfo": "Contact Info",
+        "privacyPolicy": "Privacy Policy",
+        "termsOfService": "Terms of Service",
         "sections": {
             "services": "Services",
             "company": "Company",
             "legal": "Legal"
+        },
+        "services": {
+            "socialManagement": "Social Media Management",
+            "socialDesigns": "Social Media Designs",
+            "mediaBuying": "Media Buying",
+            "websitesDev": "Websites Development",
+            "mediaProduction": "Media Production",
+            "seo": "SEO",
+            "visualIdentity": "Visual Identity Design"
         },
         "copyright": "All rights reserved.",
         "address": "Naqla Mall, Plot 9, Block 25033, Entertainment District, Obour City, Cairo, Egypt",
@@ -424,6 +440,7 @@
                 "publicRelations": "Public Relations",
                 "contentCreation": "Content Creation",
                 "seo": "SEO",
+                "visualIdentity": "Visual Identity Design",
                 "other": "Other"
             },
             "budget": "Project Budget",

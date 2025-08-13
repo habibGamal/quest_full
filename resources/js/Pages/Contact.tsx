@@ -180,6 +180,7 @@ const Contact = ({ flash }: { flash?: { success?: string; error?: string } }) =>
                         <SelectItem value="publicRelations">{t('contactPage.form.services.publicRelations')}</SelectItem>
                         <SelectItem value="contentCreation">{t('contactPage.form.services.contentCreation')}</SelectItem>
                         <SelectItem value="seo">{t('contactPage.form.services.seo')}</SelectItem>
+                        <SelectItem value="visualIdentity">{t('contactPage.form.services.visualIdentity')}</SelectItem>
                         <SelectItem value="other">{t('contactPage.form.services.other')}</SelectItem>
                       </SelectContent>
                     </Select>

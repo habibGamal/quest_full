@@ -182,7 +182,7 @@ const Index = ({ featuredProjects = [] }: IndexProps) => {
             loop
             muted
             playsInline
-            className="block md:hidden absolute inset-0 w-full h-full object-cover"
+            className="block md:hidden absolute inset-0 w-full  object-cover"
           >
             <source src="/assets/hero_mobile.mp4" type="video/mp4" />
             Your browser does not support the video tag.
@@ -302,7 +302,7 @@ const Index = ({ featuredProjects = [] }: IndexProps) => {
       <section className="py-12 px-4 bg-secondary">
         <div className="max-w-7xl mx-auto">
           <p className="text-center text-muted-foreground mb-8 font-medium">
-            Trusted by brands charting their path to success
+            {t('clientLogos.trustedBy')}
           </p>
           <div className="flex flex-wrap items-center justify-center gap-8 opacity-60">
             {clientLogos.map((logo, index) => (
@@ -310,7 +310,7 @@ const Index = ({ featuredProjects = [] }: IndexProps) => {
                 key={index}
                 src={logo}
                 alt={`Client ${index + 1}`}
-                className="h-12 w-24 object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+                className="h-24 w-24 md:h-36 md:w-36 object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
               />
             ))}
           </div>

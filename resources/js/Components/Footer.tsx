@@ -58,7 +58,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div className="space-y-4">
-            <h4 className="text-lg font-semibold">Quick Links</h4>
+            <h4 className="text-lg font-semibold">{t('footer.quickLinks')}</h4>
             <ul className="space-y-2">
               <li>
                 <Link href="/" className="text-muted-foreground hover:text-primary transition-colors">
@@ -92,18 +92,19 @@ const Footer = () => {
           <div className="space-y-4">
             <h4 className="text-lg font-semibold">{t('footer.sections.services')}</h4>
             <ul className="space-y-2">
-              <li className="text-muted-foreground">Social Media Management</li>
-              <li className="text-muted-foreground">Social Media Designs</li>
-              <li className="text-muted-foreground">Media Buying</li>
-              <li className="text-muted-foreground">Websites Development</li>
-              <li className="text-muted-foreground">Media Production</li>
-              <li className="text-muted-foreground">SEO</li>
+              <li className="text-muted-foreground">{t('footer.services.socialManagement')}</li>
+              <li className="text-muted-foreground">{t('footer.services.socialDesigns')}</li>
+              <li className="text-muted-foreground">{t('footer.services.mediaBuying')}</li>
+              <li className="text-muted-foreground">{t('footer.services.websitesDev')}</li>
+              <li className="text-muted-foreground">{t('footer.services.mediaProduction')}</li>
+              <li className="text-muted-foreground">{t('footer.services.seo')}</li>
+              <li className="text-muted-foreground">{t('footer.services.visualIdentity')}</li>
             </ul>
           </div>
 
           {/* Contact Info */}
           <div className="space-y-4">
-            <h4 className="text-lg font-semibold">Contact Info</h4>
+            <h4 className="text-lg font-semibold">{t('footer.contactInfo')}</h4>
             <div className="space-y-3">
               <div className="flex items-center space-x-3 rtl:space-x-reverse">
                 <Mail className="h-5 w-5 text-primary" />
@@ -136,15 +137,15 @@ const Footer = () => {
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link
                 href="/privacy-policy"
-                className="text-muted-foreground text-sm hover:text-primary transition-colors"
+                className="text-muted-foreground rtl:mx-4 text-sm hover:text-primary transition-colors"
               >
-                Privacy Policy
+                {t('footer.privacyPolicy')}
               </Link>
               <Link
                 href="/terms-of-service"
                 className="text-muted-foreground text-sm hover:text-primary transition-colors"
               >
-                Terms of Service
+                {t('footer.termsOfService')}
               </Link>
             </div>
           </div>
